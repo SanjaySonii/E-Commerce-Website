@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product_Details</title>
+    <link rel="stylesheet" href="project23_E_Commerce.css">
+    <style>
+        footer {
+            position: relative;
+            top: 2rem;
+        }
+
+        #Featured_Products {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="project23_E_Commerce.html"><img class="logo" src="logo.png" alt="logo"></a>
+        <ul id="navbarList">
+            <li><a href="project23_E_Commerce.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Account.html">Account</a></li>
+            <li><a href="cart.html"><img class="cart" src="cart.png" alt="cart"></a></li>
+        </ul>
+        <div class="hemburger">
+            <li><a href="cart.html"><img class="cart" src="cart.png" alt="cart"></a></li>
+            <img id="menu" src="menu.png" alt="menu">
+        </div>
+    </nav>
+    <div class="menu" id="menubar">
+        <li><a href="project23_E_Commerce.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Account.html">Account</a></li>
+    </div>
+    <div class="container3">
+        <div id="left">
+            <div id="details">
+                <img src="gallery-1.jpg" alt="buy-1">
+            </div>
+            <div id="gallery">
+                <div class="gallery">
+                    <img src="gallery-2.jpg" alt="gallery-2">
+                </div>
+                <div class="gallery">
+                    <img src="gallery-3.jpg" alt="gallery-3">
+                </div>
+                <div class="gallery">
+                    <img src="gallery-4.jpg" alt="gallery-4">
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <h3>Home/T-Shirt</h3>
+            <h1>Red Printed T-Shirt <br> By HRX</h1>
+            <h2>$50.00</h2>
+            <select name="select_size" id="Size">
+                <option value="Select Size">Select Size</option>
+                <option value="XXL">XXL</option>
+                <option value="XL">XL</option>
+                <option value="Large">Large</option>
+                <option value="Medium">Medium</option>
+                <option value="Small">Small</option>
+            </select>
+            <div> <input type="number" name="Piece" id="Piece" value="1"> <a href="cart.html"><button class="btn">Add to
+                        Cart</button></a></div>
+            <div>
+                <h2>PRODUCT DETAILS &rArr;</h2>
+                <p>Give Your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Team it witha pair of
+                    shorts for your morning workout or a denims for an evening out with the guys.</p>
+            </div>
+        </div>
+    </div>
+    <div id="related">
+        <h2>Related Products</h2>
+        <a href="products.html">View More</a>
+    </div>
+    <div id="Featured_Products">
+        <div class="products">
+            <a href="details.html"><img class="products-img" src="product-1.jpg" alt="product-1"></a>
+            <h3>Red Printed T-shirt</h3>
+            <img class="rating" src="star4.5.jpg" alt="star4.5">
+            <h3>$50.00</h3>
+        </div>
+        <div class="products">
+            <img class="products-img" src="product-14.jpg" alt="product-2">
+            <h3>Red Sports Shoes</h3>
+            <img class="rating" src="star4.5.jpg" alt="star4.5">
+            <h3>$75.00</h3>
+        </div>
+        <div class="products">
+            <img class="products-img" src="product-3.jpg" alt="product-3">
+            <h3>HRX Gray Trackpants</h3>
+            <img class="rating" src="star4.5.jpg" alt="star4.5">
+            <h3>$45.00</h3>
+        </div>
+        <div class="products">
+            <img class="products-img" src="product-26.jpg" alt="product-4">
+            <h3>Rolex Watch</h3>
+            <img class="rating" src="star4.5.jpg" alt="star4.5">
+            <h3>$220.00</h3>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <div>
+                <h2>Download our App</h2>
+                <h4>Download App for Android mobile phone.</h4>
+                <img src="play-store.png" alt="play-store" class="store">
+            </div>
+            <div>
+                <img class="logo" src="logo-white.png" alt="logo">
+                <div>Our Purpose is to Sustainably Make the Pleasure and Benefites of Sports Accessible to the Many.
+                </div>
+            </div>
+            <div>
+                <h2>Useful Links</h2>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Spot</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">Copyright &copy; 2022 &rarr; Sanjay Soni</div>
+    </footer>
+    <script>
+        let details = document.getElementById(`details`);
+        let gallery = document.getElementsByClassName(`gallery`);
+        for (const Photo of gallery) {
+            Photo.addEventListener(`click`, () => {
+                details.innerHTML = Photo.innerHTML;
+            })
+        } 
+    </script>
+        <script src="commonjs.js"></script>
+</body>
+
+</html>

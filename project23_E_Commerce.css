@@ -1,0 +1,834 @@
+/* variables */
+:root{
+    --border : 2px solid red;
+}
+/* css reset  */
+*{
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    background: linear-gradient(rgb(253 177 142 / 95%),rgb(247, 185, 185) ,rgb(253 177 142 / 95%)) no-repeat center center/cover;
+    width: 100%;
+    height: 110vh;
+}
+/* navbar goes here  */
+
+.logo{
+    height: 3rem;
+    width: 12rem;
+    position: relative;
+    left: 4rem;
+    margin-top: 1rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+#navbarList , .hemburger{
+    display: flex;
+    margin-top: 1.5rem;
+}
+#navbarList li, .hemburger li{
+    list-style: none;
+}
+#navbarList li a, .hemburger li a{
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+#navbarList li a:hover{
+    text-decoration: underline;
+    text-decoration-color: royalblue;
+    
+}
+.cart , #menu{
+    height: 1.3rem;
+    width: 1.3rem;
+}
+.hemburger{
+    position: relative;
+    right: 2rem;
+    display: none;
+}
+.menu{
+    z-index: 2;
+    position: absolute;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 2rem;
+    display: none;
+}
+.menu li {
+    list-style: none;
+    margin: .2rem 0rem;
+    width: 5rem;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* header home */
+#homeImage{
+    width: 40rem;
+    height: 36rem;
+}
+.container{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 0;
+}
+.left h1{
+    font-size: 2.5rem;
+    word-spacing: .5rem;
+}
+.left p{
+    margin: 1rem 0rem;
+    line-height: 1.3rem;
+}
+.btn{
+    background: orangered;
+    padding: .5rem 1.5rem;
+    color: white;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+/* category */
+#category{
+    display: block;
+    width: fit-content;
+    margin: auto;   
+    position: relative;
+    top: 2rem;
+}
+.category{
+    padding: 0rem 1rem;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+}
+
+/* Latest products & Featured products */
+#Featured, #Latest{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 6rem;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 1rem;
+}
+.heading hr{
+    width: 10rem;
+    height: .2rem;
+    background-color: red;
+}
+#Featured_Products , .latest_Products{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.products{
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.products-img{
+    border: 2px solid black;
+    width: 15rem;
+    height: 20rem;
+    position: relative;
+}
+.rating{
+    height: 2rem;
+    width: 5.5rem;
+}
+
+/* exclusive */
+#exclusive{
+    display: flex;
+    background: linear-gradient(rgb(253 177 142 / 95%),white, rgb(253 177 142 / 95%));
+    position: relative;
+    top: 10rem;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+}
+#Smart_band{
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    right: 5rem;
+}
+#exclusive .right h1{
+    font-size: 2.5rem;
+    word-spacing: .5rem;
+}
+#exclusive .right p{
+    margin: 1rem 0rem;
+    line-height: 1.3rem;
+    text-align: justify;
+}
+
+/* review */
+#review{
+    position: relative;
+    top: 15rem;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 235, 235);
+    width: 25rem;
+    height: fit-content;
+    padding: 1rem 1.5rem;
+    margin: 1rem 1.5rem ;
+    position: relative;
+}
+.box h3{
+    color: orange;
+    margin-bottom: .5rem;
+}
+.box h1{
+    font-size: 3.5rem;
+}
+.box p{
+    margin: 1rem 0rem;
+    line-height: 1.3rem;
+}
+.user{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10rem;
+    margin-bottom: .5rem;
+}
+#companies{
+    display: flex;
+    position: relative;
+    top: 18rem;
+    justify-content: center;
+}
+.comapany{
+    width: 10rem;
+    height: 5rem;
+    filter: invert(50%);
+    margin: 0rem 1rem;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    height: 30vh;
+    position: relative;
+    top: 19rem;
+    text-align: justify;
+    color: whitesmoke;
+}
+footer .top{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+footer .top h2{
+    margin-bottom: .5rem;
+}
+footer .top .logo{
+    left: 0;
+}
+footer .top div{
+    margin-top: 1rem;
+    width: 20%;
+}
+footer .top div div{
+    width: 100%;
+}
+footer .top div li{
+    list-style: none;
+}
+.store{
+    width: 10rem;
+    height: 3rem;
+    margin: 1rem 0rem;
+}
+.bottom{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* hover effects */
+.category:hover , .products-img:hover ,.box:hover{
+    bottom: .5rem;
+}
+.comapany:hover{
+    filter: invert(0);
+}
+.btn:hover{
+    background-color: rgb(181, 192, 78);
+    color: rgb(134, 34, 34);
+}
+
+/* product.html */
+
+#container2 h1{
+    text-align: center;
+    position: relative;
+    top: 2rem;
+}
+#buttons{
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.next{
+    width: 3rem;
+    height: 3rem;
+}
+
+/* details.html */
+.container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 3rem 0;
+}
+#details img{
+    width: 25rem;
+    height: 25rem;
+}
+#details img{
+    filter:saturate(2);
+}
+#gallery{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    margin-top: .5rem;
+    flex-wrap: nowrap;
+}
+.gallery img{
+    filter:saturate(2);
+    width: 7.3rem;
+    height: 7.3rem;
+}
+#details , #right{
+    width: 40%;
+}
+#right{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 2rem;
+    flex-wrap: nowrap;
+}
+#right #size ,#right h3, #right h1, #right h2, #right div{
+    margin: .4rem 0rem;
+}
+#right h1{
+    font-size: 2.5rem;
+}
+#right p{
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+    line-height: 1.3rem;
+    width: 80%;
+    text-align: justify;
+}
+#right input{
+    width: 4rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+#Size{
+    width: 7rem;
+    height: 2rem;
+}
+
+#right input, #Size{
+    border: var(--border);
+}
+#related{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+#related a{
+    color: black;
+}
+
+/* Cart */
+#Cart{
+    display: flex;
+    justify-content: center;
+    padding: 0rem 3rem;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+}
+.tbody{
+    border: var(--border);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.tbody h3{
+    text-align: center;
+    background-color: orange;
+    margin-bottom: 1rem;
+    border: var(--border);
+}
+.tbody .element{
+    display: flex;
+    margin-top: .5rem;
+}
+.tbody button{
+    margin-top: 1rem;
+}
+.tbody input, .tbody h4{
+    width: 4rem;
+    height: 2rem;
+    margin: 2rem 0rem;
+}
+.cartImg{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    padding: 0rem 1rem;
+}
+#cartProducts{
+    flex: 2;
+}
+#cartQuantity{
+    flex: 1;
+}
+#cartSubtotal{
+    flex: 1;
+}
+#cartQuantity div, #cartSubtotal div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calculation{
+    width: 95vw;
+    display: flex;
+    /* border: var(--border); */
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.calculation #calculationDiv{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    position: relative;
+}
+.calculation hr{
+    height: .4rem;
+    margin: 1rem 0rem;
+    background-color: tomato;
+}
+.calculation div{
+    display: flex;
+    justify-content: space-between;
+}
+.calculation li{
+    list-style: none;
+    padding: .5rem 0rem;
+}
+
+/* account */
+.account{
+    height: fit-content;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(rgb(253 177 142 / 95%),rgb(247, 185, 185) ,rgb(253 177 142 / 95%)) no-repeat center center/cover;
+}
+#AccountImg{
+    width: 25rem;
+    height: 25rem;
+}
+.account .right{
+    background-color: white;
+    width: 20rem;
+    height: 25rem;
+    text-align: center;
+}
+.account .right span{
+    padding: 1rem;
+    position: relative;
+    top: 1rem;
+}
+.forms{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 40rem;
+    position: relative;
+    top: 1rem;
+    flex-wrap: nowrap;
+    transform: translateX(-20rem);
+}
+.forms input{
+    margin: 1rem 0;
+    padding: .5rem ;
+    width: 70%;
+}
+.account .right{
+    overflow-x: hidden;
+    margin: 3rem 0;
+}
+.account .right input{
+    border: 2px solid black;
+}
+#login , #Register{
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    height: 20rem;
+    transition: transform 1s;
+}
+#login button, #Register button{
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    margin-bottom: 1rem;
+}
+.Indicator{
+    text-decoration: underline;
+    text-decoration-color: red ;
+}
+
+/* Contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(253 177 142 / 95%),rgb(247, 185, 185) ,rgb(253 177 142 / 95%)) no-repeat center center/cover;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+    margin: 1rem 0rem;
+}
+.contact form input{
+    margin: .5rem 0rem;
+    padding: .5rem ;
+}
+.contact h1{
+    text-decoration: underline;
+    text-decoration-color: blue ;
+    margin: 1rem 0rem;
+}
+.address p{
+    width: 50%;
+    text-align: justify;
+}
+.address h2{
+    margin-bottom: 1rem;
+}
+.address .contactLeft, .address .contactRight{
+    margin: 1rem 1.5rem;
+    font-size: 1rem;
+    width: 60%;
+}
+.address{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.contact img{
+    margin-bottom: 1rem;
+    width: 70%;
+    height: 30%;
+}
+
+/* ABOUT */
+.about{
+    height: fit-content;
+    background: linear-gradient(rgb(253 177 142 / 95%),rgb(247, 185, 185) ,rgb(253 177 142 / 95%)) no-repeat center center/cover;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.about hr{
+    height: .3rem;
+    background-color: brown;
+    width: 10rem;
+}
+.about .middle{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.about .middle div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.about .middle h2{
+    word-spacing: 1.1rem;
+    width: 90%;
+}
+.about .middle p{
+    line-height: 1.5rem;
+    text-align: justify;
+    margin-top: 1rem;
+    width: 90%;
+}
+.hero{
+    width: 30rem;
+    height: 22rem;
+    object-fit: contain;
+}
+.hero:hover{
+position: relative;
+bottom: 1rem;
+}
+.hero , .about hr, .about h1{
+    margin-top: 1rem;
+}
+
+
+
+/* General Responsiveness */
+
+@media screen and (max-width : 1156px) {
+    #homeImage {
+        width: 33rem;
+        height: 27rem;
+    }
+}
+
+@media screen and (max-width : 1046px) {
+    #Smart_band {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #homeImage {
+        width: 23rem;
+        height: 23rem;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+        word-spacing: .3rem;
+    }
+
+    .left p {
+        line-height: 1.3rem;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width : 878px) {
+    #Smart_band {
+        width: 10rem;
+        height: 10rem;
+        left: 1rem;
+    }
+    #right h1{
+        font-size: 1.5rem;
+    }
+    #right{
+        top: 1rem;
+        width: 20rem;
+    }
+    #details img{
+    width: 20rem;
+    height: 20rem;
+    }
+    .gallery img{
+    width: 4.3rem;
+    height: 4.3rem;
+    }
+    #right #size ,#right h3, #right h1, #right h2, #right div{
+        font-size: 1rem;
+    }
+    .container {
+        position: relative;
+        top: 1.5rem;
+    }
+
+    #exclusive .right h1 {
+        font-size: 1.5rem;
+    }
+
+    #exclusive .right h3 {
+        font-size: .8rem;
+    }
+
+    #exclusive .right p {
+        font-size: .7rem;
+    }
+
+    .left {
+        text-align: center;
+        width: fit-content;
+        padding: 0 1rem;
+    }
+
+}
+
+@media screen and (max-width : 820px) {
+
+    .logo,
+    .store {
+        height: 3rem;
+        width: 8rem;
+        object-fit: contain;
+    }
+    #navbarList {
+        display: none;
+    }
+    
+    .hemburger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width : 733px) {
+    .cartImg{
+        width: 4rem;
+        height: 4rem;
+    }
+    .tbody button{
+        margin-top: .5rem;
+    }
+    #Cart h2{
+        font-size: 1.2rem;
+    }
+    .tbody input, .tbody h4{
+        margin: 1rem 0rem;
+    }
+}
+@media screen and (max-width : 645px) {
+    footer {
+        font-size: .8rem;
+    }
+    
+    .logo,
+    .store {
+        height: 1.5rem;
+        width: 4rem;
+        object-fit: contain;
+    }
+
+    #exclusive .right h1 {
+        font-size: 1rem;
+    }
+    .about h1{
+        font-size: 1.5rem;
+    }
+    #right{
+        left: 0;
+    }
+    .calculation #calculationDiv{
+        width: 12rem;
+    }
+    .calculation{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width : 581px) {
+    .cartImg{
+        width: 4rem;
+        height: 3rem;
+    }
+    .tbody button{
+        margin-top: .3rem;
+    }
+    #Cart h2{
+        font-size: 1rem;
+        width: 90%;
+    }
+    .tbody input, .tbody h4{
+        margin: 1.5rem 0rem;
+        width: 3rem;
+        height: 1.5rem;
+    }
+}
+@media screen and (max-width : 522px) {
+     .tbody input, .tbody h4{
+        margin: 3rem 0rem;
+    }
+    
+}
+@media screen and (max-width : 430px) {
+    #AccountImg{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media screen and (max-width : 400px) {
+    footer ,.btn{
+        font-size: .5rem;
+    }
+    .tbody input, .tbody h4{
+       margin: 4rem 0rem;
+       width: 3rem;
+       height: 1rem;
+    }
+}

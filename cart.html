@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="project23_E_Commerce.css">
+    <style>
+        footer {
+            position: relative;
+            top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="project23_E_Commerce.html"><img class="logo" src="logo.png" alt="logo"></a>
+        <ul id="navbarList">
+            <li><a href="project23_E_Commerce.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Account.html">Account</a></li>
+            <li><a href="#"><img class="cart" src="cart.png" alt="cart"></a></li>
+        </ul>
+        <div class="hemburger">
+            <li><a href="cart.html"><img class="cart" src="cart.png" alt="cart"></a></li>
+            <img id="menu" src="menu.png" alt="menu">
+        </div>
+    </nav>
+    <div class="menu" id="menubar">
+        <li><a href="project23_E_Commerce.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Account.html">Account</a></li>
+    </div>
+    <div id="Cart">
+        <div class="tbody" id="cartProducts">
+            <h3>Products</h3>
+            <div class="element">
+                <img src="buy-1.jpg" alt="buy-1" class="cartImg">
+                <div>
+                    <h2>Red Printed T-shirt</h2>
+                    <h5>Price: $50.00</h5><button>Remove</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="buy-2.jpg" alt="buy-2" class="cartImg">
+                <div>
+                    <h2>HRX sports shoes</h2>
+                    <h5>Price: $80.00</h5><button>Remove</button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="buy-3.jpg" alt="buy-3" class="cartImg">
+                <div>
+                    <h2>HRX Gray lower</h2>
+                    <h5>Price: $100.00</h5><button>Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="tbody" id="cartQuantity">
+            <h3>Quantity</h3>
+            <div>
+                <input type="number" name="Piece" id="Piece" value="1">
+                <input type="number" name="Piece" id="Piece" value="1">
+                <input type="number" name="Piece" id="Piece" value="1">
+            </div>
+        </div>
+        <div class="tbody" id="cartSubtotal">
+                <h3>Subtotal</h3>
+                <div>
+                    <h4>$50.00</h4>
+                    <h4>$80.00</h4>
+                    <h4>$100.00</h4>
+            </div>
+        </div>
+    </div>
+    <div class="calculation">
+        <div id="calculationDiv">
+            <hr>
+            <div>
+                <ul>
+                    <li>Subtotal</li>
+                    <li>Tax</li>
+                    <li>Total</li>
+                </ul>
+                <ul>
+                    <li>$230.00</li>
+                    <li>$35.00</li>
+                    <li>$265.00</li>
+                </ul>
+            </div>
+            <hr>
+            <button class="btn">Proceed to Checkout &rArr;</button>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <div>
+                <h2>Download our App</h2>
+                <h4>Download App for Android mobile phone.</h4>
+                <img src="play-store.png" alt="play-store" class="store">
+            </div>
+            <div>
+                <img class="logo" src="logo-white.png" alt="logo">
+                <div>Our Purpose is to Sustainably Make the Pleasure and Benefites of Sports Accessible to the Many.
+                </div>
+            </div>
+            <div>
+                <h2>Useful Links</h2>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Spot</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">Copyright &copy; 2022 &rarr; Sanjay Soni</div>
+    </footer>
+    <script src="commonjs.js"></script>
+</body>
+
+</html>
